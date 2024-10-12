@@ -1,0 +1,51 @@
+package Priyankatasks;
+import java.util.*;
+
+public class Student_Grade_Cal {
+
+	public static void main(String[] args) {
+
+		Scanner sc=new Scanner(System.in);
+		System.out.println("STUDENT GRADE CALCULATOR");
+		System.out.println("Enter the no.of.subjects :");
+		int subs=sc.nextInt();
+		int total=0;
+		for(int i=0;i<subs;i++)
+		{
+			System.out.println("Enter the subject "+(i+1)+" mark");
+			int marks=sc.nextInt();
+			total=total+marks;
+		}
+		double avgP=(double)total/subs;
+		char Grade;
+		if(avgP>=90)
+		{
+			Grade='S';
+		}
+		else if(avgP>=80)
+		{
+			Grade='O';
+		}
+		else if(avgP>=70)
+		{
+			Grade='A';
+		}
+		else if(avgP>=60)
+		{
+			Grade='B';
+		}
+		else if(avgP>=50)
+		{
+			Grade='C';
+		}
+		else
+		{
+			Grade='F';
+		}
+		System.out.println("Total marks obtained : "+total);
+		System.out.println("Average Percentage : "+avgP+"%");
+		System.out.println("Grade obtained : "+Grade);
+		
+		
+	}
+}
